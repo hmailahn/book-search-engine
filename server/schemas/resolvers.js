@@ -1,8 +1,21 @@
+const { User, Book} = require('../models')
+
 const resolvers = {
-    Query: {
-      helloWorld: () => {
-        return 'Hello world!';
-      }
+    // Query: {
+    //     books: async () => {
+    //       return Book.find().sort({ createdAt: -1 });
+    //     }
+    //   }
+
+    Mutation: {
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+
+            return user;
+        },
+        // login: async () => {
+
+        // }
     }
   };
   
