@@ -31,11 +31,22 @@ export const ADD_USER = gql`
 export const SAVE_BOOK = gql `
 mutation saveBook(bookId: String!, authors: [String!], description: String!, title: String!, image: String!, link: String!) {
     saveBook(bookId: $bookId, authors: $authors, description: $description, title: $title, image: $image) {
-        
+       user {
+           _id
+           username
+       } 
     }
 }
-`
+`;
 
-// SAVE_BOOK will execute the saveBook mutation.
+export const REMOVE_BOOK = gql `
+mutation removeBook($bookId: String!) {
+    removeBook(bookId: $bookId) {
+        user {
+            _id
+            username
+        }
+    }
+}
+`;
 
-// REMOVE_BOOK will execute the removeBook mutation
