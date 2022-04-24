@@ -7,7 +7,7 @@ import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
 import { SAVE_BOOK } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
-// import { GET_ME } from '../utils/queries';
+import { GET_ME } from '../utils/queries';
 
 
 const SearchBooks = () => {
@@ -16,7 +16,9 @@ const SearchBooks = () => {
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
 
-  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+  const [saveBook, { data, loading, error }] = useMutation(SAVE_BOOK, {
+    refetchQueries: [GET_ME],
+  });
 
   // const { loadingMe, dataMe } = useQuery(GET_ME);
 
