@@ -26,7 +26,7 @@ const [removeBook, {error}] = useMutation(REMOVE_BOOK);
 
     try {
       // const response = await deleteBook(bookId, token);
-      await removeBook({
+      const { data } = await removeBook({
         variables: { bookId }
       });
 

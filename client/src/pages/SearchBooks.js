@@ -5,13 +5,8 @@ import Auth from '../utils/auth';
 import { saveBook, searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
-
-// SearchBooks.js:
-
-// Use the Apollo useMutation() Hook to execute the SAVE_BOOK mutation in the handleSaveBook() function instead of the saveBook() function imported from the API file.
-
-// Make sure you keep the logic for saving the book's ID to state in the try...catch block!
-
+import { SAVE_BOOK } from '../utils/mutations';
+import {useMutation} from '@apollo/react-hooks';
 
 
 const SearchBooks = () => {
@@ -74,11 +69,9 @@ const SearchBooks = () => {
     }
 
     try {
-      const response = await saveBook(bookToSave, token);
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+      const { data } = await saveBook({
+        variables: bookToSave
+      })
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
