@@ -37,7 +37,7 @@ const typeDefs = gql`
       login(email: String!, password: String!): Auth
       addUser(username: String!, email: String! password: String!): Auth
     #   (Look into creating what's known as an input type to handle all of these parameters!)
-      saveBook(authors: [String!], description: String!, title: String!, bookId: String!, image: String!, link: String!): Auth
+      saveBook(bookId: String!, authors: [String!], description: String!, title: String!, image: String!, link: String!): Auth
       removeBook(bookId: String!): Auth
   }
 
