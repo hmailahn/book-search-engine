@@ -28,14 +28,14 @@ const typeDefs = gql`
 
   
 
-#   type Auth {
-#     token: ID!
-#     user: User
-#   }
+  type Auth {
+    token: ID!
+    user: User
+  }
 
   type Mutation {
-      login(email: String!, password: String!): User
-      addUser(username: String!, email: String! password: String!): User
+      login(email: String!, password: String!): Auth
+      addUser(username: String!, email: String! password: String!): Auth
     #   (Look into creating what's known as an input type to handle all of these parameters!)
       saveBook(authors: [String!], description: String!, title: String!, bookId: String!, image: String!, link: String!): User
       removeBook(bookId: String!): User
