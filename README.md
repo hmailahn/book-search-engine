@@ -7,6 +7,8 @@
   4. [Screenshot](#Screenshot)
   5. [Repository](#Repository)
   6. [Deployed-Project](#Deployed-Project)
+  7. [Contact-Me](#Contact-Me)
+  
 ## Description
 Google Books Search is an application where a user can search books, create a log in, and add books to a shelf to save for later.
 ## Usage
@@ -24,3 +26,10 @@ To use this application, go to https://book-search-hmailahn.herokuapp.com/ here 
 https://github.com/hmailahn/book-search-engine
 ## Deployed-Project
 https://book-search-hmailahn.herokuapp.com/
+
+## Contact-Me
+Questions? 
+<details>
+    <summary>Contact</summary>
+    mailahnheidi@gmail.com <br>
+</details>
