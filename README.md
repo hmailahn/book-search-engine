@@ -1,5 +1,7 @@
 # Book-Search-Engine
 
+![GitHub last commit](https://img.shields.io/github/last-commit/hmailahn/book-search-engine)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hmailahn/book-search-engine)  ![GitHub watchers](https://img.shields.io/github/watchers/hmailahn/book-search-engine?label=Watch&style=social)  ![GitHub top language](https://img.shields.io/github/languages/top/hmailahn/book-search-engine)
+
 ## Table of Contents:
   1. [Description](#Description)
   2. [Usage](#Usage)
